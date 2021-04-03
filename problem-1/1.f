@@ -10,8 +10,15 @@ for(int i=5; i<1000; i+=5)
 	multiples.set($[i], 1);
 
 for(int i=0; i<1000; i+=1)
-	#if($`multiples.at($[i]) == 1`)
+	//if(==(multiples.at($[i]), 1))
+	if(multiples.at($[i]) == 1)
+		$`val += $[i]`;
+
+//alternative
+/*
+for(int i=0; i<1000; i+=1)
 	if(==(multiples.at($[i]), 1))
 		$`val += $[i]`;
+*/
 
 console(val)
