@@ -1,14 +1,13 @@
 #!/usr/bin/env nift
 
-int ans;
+int ans, 
+    max_int = 10000,
+    no_primes = 0;
+std::vector<double>{et} isPrime($[max_int], 1),
+                        primes($[max_int], 0);
 
 exprtk
 {
-	var max_int := 10000;
-	var isPrime[10000] := [1];
-	var primes[10000] := [0];
-	var no_primes := 0;
-
 	isPrime[0] = isPrime[1] = 0;
 
 	for(var i:=2; i<max_int; i+=1)
@@ -29,7 +28,7 @@ exprtk
 	{
 		if(600851475143 % primes[i] == 0)
 		{
-			nsm_setnumber('ans', primes[i]);
+			ans := primes[i];
 			break;
 		}
 	}
