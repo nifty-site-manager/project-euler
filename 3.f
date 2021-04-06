@@ -4,7 +4,7 @@ int max_int = 10000;
 std::vector<double> isPrime($[max_int], 1), primes;
 
 isPrime.set(0, 0);
-isPrime.set(0, 1);
+isPrime.set(1, 0);
 
 for(int i=2; i<$[max_int]; i+=1)
 	if(isPrime.at($[i]))
