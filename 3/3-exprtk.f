@@ -1,5 +1,7 @@
 #!/usr/bin/env nift
 
+int ans;
+
 exprtk
 {
 	var max_int := 10000;
@@ -25,10 +27,12 @@ exprtk
 
 	for(var i:=no_primes-1; i>=0; i-=1)
 	{
-		if(600851475143%primes[i] == 0)
+		if(600851475143 % primes[i] == 0)
 		{
-			println(primes[i]);
+			nsm_setnumber('ans', primes[i]);
 			break;
 		}
 	}
 }
+
+console(ans)
